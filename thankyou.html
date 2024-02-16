@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Thank You</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Optional: Adjusts the height to the full viewport height */
+    }
+
+    .main-container {
+        width: 80%; /* Adjust the width as needed */
+    }
+</style>
+
+<body>
+    <div>
+        <p>Thank You For your valuable time. We will get back to you shortly.</p>
+        <p>If any issues, email me at 'daniemaharaj@gmail.com'</p>
+    </div>  
+
+    <!-- Include the script at the end of the body -->
+    <script>
+        // Function to retrieve and display values
+        function displayValues() {
+            var fname = localStorage.getItem("fname");
+            var lname = localStorage.getItem("lname");
+            var country = localStorage.getItem("country");
+
+            console.log("Retrieved:", fname, lname, country);
+
+            // Display the values in the HTML content
+            document.getElementById("displayValues").innerHTML = "First Name: " + fname + "<br>Last Name: " + lname + "<br>Country: " + country;
+        }
+
+        // Call the function with a delay to ensure values are set
+        setTimeout(displayValues, 1000); // Adjust the delay as needed
+    </script>
+    
+    <!-- Display the values in the HTML content -->
+    <div id="displayValues"></div>
+</body>
+</html>

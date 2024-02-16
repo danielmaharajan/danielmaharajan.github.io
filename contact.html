@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Add this style for the column layout */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .column img {
+            width: 250px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .column form {
+            margin-left: 20px; /* Adjust the margin as needed */
+        }
+
+        /* Add styles for the heading and description */
+        .heading {
+            text-align: center;
+        }
+
+        .heading h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function next() {
+            var firstname = document.getElementById('fname').value;
+            var lastname = document.getElementById('lname').value;
+            var country = document.getElementById('country').value;
+
+            console.log("Submitted:", firstname, lastname, country);
+
+            if (firstname === '' || lastname === '' || country === '') {
+                document.getElementById("error").style.color = "red";
+                document.getElementById("error").innerHTML = "Please enter both names and country";
+            } else {
+                localStorage.setItem("fname", firstname);
+                localStorage.setItem("lname", lastname);
+                localStorage.setItem("country", country);
+
+                // Open the "thankyou.html" in a new pop-up window
+                window.open("thankyou.html", "_blank");
+
+                // If you want to redirect the current page, you can use:
+                // location.href = "thankyou.html";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Ribbon with navigation links -->
+    <div class="ribbon">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="heading">
+        <h2>Contact Us</h2>
+        <p>Since you came here, enter your details:</p>
+    </div>
+
+    <div class="container">
+        <div class="column">
+            <img src="cpuline.jpg" alt="Map Image" width="450px">
+        </div>
+
+        <div class="column">
+            <form action="thankyou.html" target="_self" method="post">
+                <label for="fname" title="Enter Your First Name">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname" title="Enter Your Last Name">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="country" title="Select Country">Country</label>
+                <select id="country" name="country">
+                    <option value="india">India</option>
+                    <option value="europe">Europe</option>
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+                <label for="subject" title="Write to us">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                <input type="submit" value="Submit" onclick="next()">
+            </form>
+        </div>
+    </div>
+
+    <!-- Add this at the end of your body section -->
+    <footer>
+        <p class="footer-left">&copy; All rights reserved 2024</p>
+        <p class="footer-right">Daniel Maharajan</p>
+    </footer>
+</body>
+
+</html>
