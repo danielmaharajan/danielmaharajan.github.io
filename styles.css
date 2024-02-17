@@ -1,149 +1,168 @@
 body {
-    font-family: 'Bookman Old Style', sans-serif;
-    background-color: #B1FAF5; /* Darker shade of azure */
-    margin: 0; /* Remove default margin */
-    padding: 20px; /* Add padding for content */
+  font-family: 'Bookman Old Style', sans-serif;
+  background-color: #B1FAF5;
+  margin: 0;
+  padding: 20px;
 }
-/* Additional styles for the ribbon */
+
 .ribbon {
-    background-color: mediumseagreen;
-    padding: 10px;
-    text-align: center; /* Align text to the left */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0; /* Start from the leftmost corner */
-    z-index: 1;
-    border-bottom: 2px solid #B1FAF5;
-    box-sizing: border-box;
+  background-color: mediumseagreen;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-bottom: 2px solid #B1FAF5;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between; /* Align items to the left and right */
+  align-items: center; /* Center-align items vertically */
+}
+
+.ribbon .navigation-links {
+  display: flex;
+  align-items: center; /* Center-align items vertically */
+  justify-content: center; /* Center-align items horizontally */
+  flex-grow: 1; /* Allow navigation links to grow and take available space */
 }
 
 .ribbon a {
-    color: #800080;
-    text-decoration: none;
-    margin: 0 10px;
+  color: #800080;
+  text-decoration: none;
+  margin: 0 20px;
 }
 
-/* Add more styles as needed */
+.ribbon .social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.ribbon .social-icons a {
+  margin: 0 10px;
+}
+
+.ribbon .social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ... rest of your CSS ... */
+
+
 #profile-picture {
-    width: 100px; /* Set the width of the picture */
-    height: 100px; /* Set the height of the picture */
-    border: 2px solid #ccc; /* Add a slight border */
-    border-radius: 50%; /* Make the border circular */
-    margin: 20px 10px; /* Add some spacing between the picture and content (top and bottom) */
+  width: 100px;
+  height: 100px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin: 20px 10px;
 }
 
 table {
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 td {
-    vertical-align: top;
+  vertical-align: top;
 }
 
-/* Updated style for the right column content */
 td:last-child {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 ul {
-    list-style-type: none; /* Remove default list style */
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
-/* Additional styles for the ribbon */
-
-/* Add this to your existing CSS */
-
-/* Add this to your existing CSS */
-
-/* Add this to your existing CSS */
 
 footer {
-    background-color: #333; /* Dark background color for the footer */
-    color: #fff; /* Text color for the footer */
-    padding: 10px; /* Padding for content within the footer */
-    text-align: left; /* Align content to the left */
-    position:fixed; /* Fixed positioning at the bottom of the viewport */
-    width: 100%; /* Full width of the viewport */
-    bottom: 0; /* Align to the bottom of the viewport */
-    left: 0; /* Align to the leftmost corner */
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
-/* Add this to your existing CSS */
 
 .footer-left {
-    float: left; /* Float left for left-aligned text */
-    margin-left: 10px; /* Add some left margin to the name */
+  float: left;
+  margin-left: 10px;
 }
 
 .footer-right {
-    float: right; /* Float right for right-aligned text */
-    margin-right: 29px; /* Add some right margin to the name */
+  float: right;
+  margin-right: 29px;
 }
 
-/* Contact Form
+/* Your contact form styles go here */
 
-* {
-  box-sizing: border-box;
-}
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+  /* Contact Form
 
-* {
-  box-sizing: border-box;
-}
+  * {
+    box-sizing: border-box;
+  }
+  <style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
-/* Style inputs */
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
+  * {
+    box-sizing: border-box;
   }
-  
-  input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-  
-  /* Style the container/contact section */
-  .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 10px;
-  }
-  
-  /* Create two columns that float next to eachother */
-  .column {
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-    padding: 20px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column, input[type=submit] {
+
+  /* Style inputs */
+  input[type=text], select, textarea {
       width: 100%;
-      margin-top: 0;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
     }
-  }
+    
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    /* Style the container/contact section */
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+    
+    /* Create two columns that float next to eachother */
+    .column {
+      float: left;
+      width: 50%;
+      margin-top: 6px;
+      padding: 20px;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
 
-  
+    
